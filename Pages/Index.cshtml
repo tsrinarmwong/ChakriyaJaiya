@@ -1,0 +1,54 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <p> </p>
+    <h1>ChakriyaJaiya</h1>
+<p>Explore the beauty of photography through my lens. Check out my latest work in the gallery.</p>
+<a href="/Gallery">View Gallery</a>
+</div>
+
+<div class="home-slider">
+    <div class="slider">
+        <img class="slider-image" src="~/images/CKYJY_Sample1.png" alt="Photo 1">
+        <img class="slider-image" src="~/images/CKYJY_Sample2.png" alt="Photo 2">
+        <img class="slider-image" src="~/images/CKYJY_Sample3.png" alt="Photo 3">
+    </div>
+    @* <div class="overlay-content">
+        <a href="/Gallery" class="album-button">View Album</a>
+    </div> *@
+</div>
+
+@section Scripts {
+    <script>
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slider-image");
+
+        function showSlides() {
+            // Hide all slides
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            // Increment the slide index
+            slideIndex++;
+
+            // If the slideIndex exceeds the number of slides, reset to the first slide
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            // Show the current slide
+            slides[slideIndex - 1].style.display = "block";
+
+            // Change slide every 7 seconds
+            setTimeout(showSlides, 5000);
+        }
+
+        // Initialize the slideshow
+        showSlides();
+    </script>
+}

@@ -1,0 +1,83 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #2f2d2d;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+/* Photo Stuff */
+.gallery img {
+  width: 100%; /* Image takes full width of its container */
+  height: auto; /* Maintains aspect ratio */
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  /* Larger screens (Desktop) */
+  .gallery img {
+    max-width: 1200px; /* For full-width display */
+  }
+}
+/* Slider Container */
+.home-slider {
+    position: relative;
+    width: 100%;
+    max-height: 90vh; /* Adjusts the height of the slider */
+    overflow: hidden;
+}
+
+/* Image Styling */
+.slider-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures images fill the container properly */
+}
+
+/* Overlay Content */
+.overlay-content {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    text-align: center;
+}
+
+/* Album Button Styling */
+.album-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.album-button:hover {
+    background-color: #555;
+}
+
+/* Show the First Image by Default */
+.slider-image:first-child {
+    display: block;
+}
