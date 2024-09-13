@@ -1,5 +1,7 @@
 # **ChakriyaJaiya Photography Portfolio Website**
 
+<img src="https://github.com/user-attachments/assets/a4daa23a-0fbb-4a73-9442-7082eee87a58" alt="Screen Recording" width="300">
+
 This is a simple photography portfolio website for showcasing beautiful images. The site features a dynamic image slider on the home page and a gallery page to display the full collection.
 
 ## **Project Overview**
